@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Foodeiblog Template">
+    <meta name="keywords" content="Foodeiblog, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agile | Login</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Unna:400,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="container login__container">
+        <img class="login__background" src="img/login-background.png" alt="">
+        <div class="form__area">
+            <div class="inner__form">
+                <form action="" class="login__form">
+                    <h2 class="form__heading">GİRİŞ</h2>
+                    <div class="input__group">
+                        <label for="">Kullanıcı Adı</label>
+                        <img src="img/ikonlar/user.png" alt="">
+                        <input type="text" placeholder="Kullanıcı adınızı giriniz">
+                    </div>
+                    <div class="input__group">
+                        <label for="">Şifre</label>
+                        <img src="img/ikonlar/password.png" alt="">
+                        <input type="password" placeholder="Şifrenizi giriniz">
+                    </div>
+                    <button class="btn">Giriş</button>
+                    <a href="" class="forget__link">Şifremi unuttum ?</a>
+                    
+                </form>
+                <form action="" class="signup__form">
+                    <h2 class="form__heading">KAYIT OL</h2>
+                    <div class="input__group">
+                        <label for="">Kullanıcı Adı</label>
+                        <img src="img/ikonlar/user.png" alt="">
+                        <input type="text" placeholder="Kullanıcı adınızı giriniz">
+                    </div>
+                    <div class="input__group">
+                        <label for="">Şifre</label>
+                        <img src="img/ikonlar/password.png" alt="">
+                        <input type="password" placeholder="Şifrenizi giriniz">
+                    </div>
+                    <div class="input__group">
+                        <label for="">E-Posta</label>
+                        <img src="img/ikonlar/mail.png" alt="">
+                        <input type="email" placeholder="E-Posta adresinizi giriniz">
+                    </div>
+                    <button class="btn">Kayıt ol</button>
+                </form>
+            </div>
+            <div class="aside">
+                <div class="inner__aside">
+                    <span class="signup__section">Mevcut bir hesabın yok mu? <a href="">Kayıt ol</a></span>
+                    <span class="login__section">Zaten bir hesabın var mı? <a href="">Giriş yap</a></span>
+                </div>
+            </div>
+        </div>    
+    </div>
+    
+
+
+    <script>
+        const flip = document.querySelector('.inner__form'),
+        flipbtn = document.querySelectorAll('.inner__aside span a'),
+        fliphold = document.querySelector('.inner__aside')
+        let state = false;
+        flipbtn.forEach(element => {
+            element.addEventListener('click',showhide)
+        });
+        function showhide(e){
+            event.preventDefault()
+            if(!state){
+                flip.classList.add("active");
+                fliphold.classList.add("active")
+                state = true;
+            }else{
+                flip.classList.remove("active");
+                fliphold.classList.remove("active")
+                state = false;
+            }
+        }
+    </script>
+</body>
+</html>
